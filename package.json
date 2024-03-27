@@ -1,9 +1,8 @@
 {
-    "name": "evasion",
+    "name": "evajs",
     "type": "module",
     "version": "1.0.0",
-    "description": "",
-    "main": "index.js",
+    "main": "dist/index.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
         "dev": "tsx watch src/index.ts"
@@ -11,8 +10,7 @@
     "engines": {
         "node": ">=20.11.1"
     },
-    "keywords": [],
-    "author": "",
+    "author": "SharkEzz <icraft640@gmail.com>",
     "license": "ISC",
     "devDependencies": {
         "@biomejs/biome": "1.6.3",
