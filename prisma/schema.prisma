@@ -1,0 +1,58 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Player {
+  username             String                    @id
+  playerTag            String?                   @unique
+  firstName            String
+  lastName             String
+  bestKillStreak       Int?
+  bestDamageInflicted  Int?
+  isJVS                Boolean                   @default(true)
+  sessions             SessionsPlayers[]
+  sessionsGamesResults PlayerSessionGameResult[]
+}
+
+model Session {
+  id           Int               @id @default(autoincrement())
+  date         DateTime
+  players      SessionsPlayers[]
+  sessionGames SessionGame[]
+}
+
+model SessionsPlayers {
+  player         Player  @relation(fields: [playerUsername], references: [username])
+  playerUsername String
+  session        Session @relation(fields: [sessionId], references: [id])
+  sessionId      Int
+
+  @@id([playerUsername, sessionId])
+}
+
+// Parties par session
+model SessionGame {
+  id                      Int                       @id @default(autoincrement())
+  session                 Session                   @relation(fields: [sessionId], references: [id])
+  sessionId               Int
+  map                     String // enum ?
+  PlayerSessionGameResult PlayerSessionGameResult[]
+}
+
+// Resultats d'un joueur pour une partie d'une session
+model PlayerSessionGameResult {
+  id             Int         @id @default(autoincrement())
+  sessionGame    SessionGame @relation(fields: [sessionGameId], references: [id])
+  sessionGameId  Int
+  player         Player      @relation(fields: [playerUsername], references: [username])
+  playerUsername String
+  hasWon         Boolean
+  kills          Int
+  deaths         Int
+  assists        Int
+}

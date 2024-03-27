@@ -1,0 +1,13 @@
+{
+    "compilerOptions": {
+        "module": "NodeNext",
+        "verbatimModuleSyntax": true,
+        "strict": true,
+        "exactOptionalPropertyTypes": true,
+        "moduleDetection": "force",
+        "noUncheckedIndexedAccess": true,
+        "outDir": "dist",
+        "target": "ESNext"
+    },
+    "include": ["src", "prisma"]
+}
