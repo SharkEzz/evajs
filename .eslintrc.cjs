@@ -1,3 +1,4 @@
+/* eslint-env node */
 module.exports = {
   root: true,
   parser: '@typescript-eslint/parser',
@@ -26,6 +27,7 @@ module.exports = {
     ecmaVersion: 'latest',
     sourceType: 'module',
     project: true,
+    tsconfigRootDir: __dirname,
   },
   rules: {
     'import-x/named': 0,
@@ -34,5 +36,6 @@ module.exports = {
     'import-x/no-named-as-default-member': 0,
     'import-x/no-unresolved': 0,
     'import-x/extensions': 0,
+    'n/no-missing-import': 0,
   },
 };

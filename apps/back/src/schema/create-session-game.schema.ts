@@ -1,6 +1,7 @@
 import { z } from 'zod';
 
 const createSessionGameSchema = z.object({
+  sessionId: z.number().positive(),
   map: z.string(),
   playersResults: z
     .array(

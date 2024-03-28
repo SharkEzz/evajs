@@ -1,0 +1,4 @@
+
+> evajs-back@1.0.0 build /home/tristan/DEV/evajs/apps/back
+> tsc -p tsconfig.build.json
+

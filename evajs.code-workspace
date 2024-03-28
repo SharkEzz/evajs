@@ -1,0 +1,22 @@
+{
+    "folders": [
+        {
+            "path": "."
+        },
+        {
+            "path": "apps/back"
+        },
+        {
+            "path": "apps/front"
+        }
+    ],
+    "settings": {
+        "editor.defaultFormatter": "biomejs.biome",
+        "editor.formatOnSave": true,
+        "eslint.workingDirectories": [
+            {
+                "mode": "auto"
+            }
+        ]
+    }
+}

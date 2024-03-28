@@ -1,0 +1,17 @@
+{
+    "compilerOptions": {
+        "strict": true,
+        "exactOptionalPropertyTypes": true,
+        "moduleDetection": "force",
+        "noUncheckedIndexedAccess": true,
+        "target": "ESNext",
+        "skipLibCheck": true,
+        "noFallthroughCasesInSwitch": true,
+        "preserveWatchOutput": true,
+        "module": "NodeNext",
+        "outDir": "./dist",
+        "incremental": true,
+        "composite": true
+    },
+    "include": ["src", "prisma"]
+}

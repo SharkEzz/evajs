@@ -1,0 +1,4 @@
+
+> evajs-back@1.0.0 lint /home/tristan/DEV/evajs/apps/back
+> eslint --ext .ts src prisma
+

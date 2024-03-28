@@ -1,0 +1,29 @@
+{
+    "compilerOptions": {
+        "strict": true,
+        "exactOptionalPropertyTypes": true,
+        "moduleDetection": "force",
+        "noUncheckedIndexedAccess": true,
+        "target": "ESNext",
+        "skipLibCheck": true,
+        "noFallthroughCasesInSwitch": true,
+        "preserveWatchOutput": true,
+        "module": "ESNext",
+
+        "lib": ["ESNext", "DOM"],
+
+        /* Bundler mode */
+        "moduleResolution": "bundler",
+        "resolveJsonModule": true,
+        "verbatimModuleSyntax": true,
+        "noEmit": true,
+        "jsx": "react-jsx",
+
+        "baseUrl": "./",
+        "paths": {
+            "@/*": ["./src/*"]
+        }
+    },
+    "include": ["src"],
+    "references": [{ "path": "./tsconfig.node.json" }, { "path": "../back" }]
+}
