@@ -26,8 +26,7 @@ module.exports = {
   parserOptions: {
     ecmaVersion: 'latest',
     sourceType: 'module',
-    project: true,
-    tsconfigRootDir: __dirname,
+    EXPERIMENTAL_useProjectService: true,
   },
   rules: {
     'import-x/named': 0,

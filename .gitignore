@@ -4,8 +4,7 @@ node_modules
 
 .vscode
 
-prisma/dev.db
-prisma/dev.db-journal
+db.sqlite3
 
 dist
 .turb

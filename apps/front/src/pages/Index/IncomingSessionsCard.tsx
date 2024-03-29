@@ -1,8 +1,8 @@
-import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
 import { trpc } from '@/trpc';
-import { LoaderCircle, Plus } from 'lucide-react';
+import { LoaderCircle } from 'lucide-react';
+import { CreateSessionDialog } from './CreateSessionDialog';
 
 export function IncomingSessionsCard() {
   const { data: incomingSessions, isLoading: isIncomingSessionsLoading } =
@@ -16,10 +16,7 @@ export function IncomingSessionsCard() {
             Sessions à venir
             {isIncomingSessionsLoading && <LoaderCircle className="animate-spin" />}
           </p>
-          <Button className="gap-2">
-            <Plus size={18} />
-            Nouvelle session
-          </Button>
+          <CreateSessionDialog />
         </CardTitle>
       </CardHeader>
       <CardContent>
